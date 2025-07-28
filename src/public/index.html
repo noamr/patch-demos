@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title id="title">Patch demos</title>
+    <script type=module src="/main.js">
+    </script>
+</head>    
+<div id="unsupported">
+Patching is not supported in this browser
+</div>
+<div id="content">
+    <header>
+        <form name="header-form">
+            <label>
+                Choose demo:
+                <select name="demo" id="demo-select"></select>
+            </label>
+        </form>
+    </header>
+    <main id="main">
+
+    </main>
+    <template patchsrc="/demo-content/" patchfor="main"></template>
+    <template patchsrc="/demo-options/" patchfor="demo-select"></template>
+    <template patchsrc="/title/" patchfor="title"></template>
+</div>
+</html>

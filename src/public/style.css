@@ -1,0 +1,57 @@
+div#content {
+    display: none;
+}
+
+div#unsupported {
+    display: block;
+}
+
+:root.patching-supported {
+    div#unsupported {
+        display: none;
+    }
+    div#content {
+        display: block;
+    }
+}
+
+#main:patching {
+    display: none;
+}
+
+.loading {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+fieldset {
+    display: flex;
+    gap: 10px;
+}
+
+#slow-updating-list:has(*:patching) .loading {
+    opacity: 1;
+}
+
+*:patching {
+    background: yellow;
+}
+
+ul {
+    background: lightgreen;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row > section {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
