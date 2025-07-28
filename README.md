@@ -1,6 +1,8 @@
 # patch-demos
 A few demos for the document patching feature described [here](https://github.com/WICG/declarative-partial-updates?tab=readme-ov-file#part-1-patching-out-of-order-streaming).
 
+This is a very early state of the feature, and requires Chrome Canary (>140.0.7322.0) and the "Document patching" flag turned on (chrome://flags/#document-patching).
+
 ## The patching feature
 
 Patching allows streaming HTML content into existing DOM.
