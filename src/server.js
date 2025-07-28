@@ -12,7 +12,6 @@ app.use(express.static(path.resolve(dirname, "public")))
 function demo_from_req(req) {
     const referer = new URL(req.headers.referer);
     const demo = /\/demo\/(.*)/.exec(referer)[1];
-    console.log(demo);
     return demo;
 }
 
